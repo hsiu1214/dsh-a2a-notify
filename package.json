@@ -1,0 +1,39 @@
+{
+  "name": "dsh-a2a-notify",
+  "version": "0.1.0",
+  "description": "Windows toast notifications for session lifecycle events (new/running/finished/error) across all workspaces, for A2A and headless tasks. Host-only, no client bundle.",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js",
+    "lib/toast.ps1",
+    "lib/dispatcher.ps1",
+    "test/host.test.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "a2a"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/host.test.mjs"
+  }
+}
